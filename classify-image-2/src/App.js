@@ -14,7 +14,7 @@ function ImageLabeling() {
   const fetchImagesFromGoogleDrive = async () => {
     try {
       const folderId = '128vMi0LdY-f3d2rj_LHl_QRJ6TSBbpv3'; // ID of the folder
-      const apiKey = 'AIzaSyBqCxASkydELSoQoBTUCOvkK9wuboH4YlQ'; // Replace with your Google Drive API key
+      const apiKey = 'apikey'; // Replace with your Google Drive API key
 
       const response = await fetch(`https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}`);
       const data = await response.json();
