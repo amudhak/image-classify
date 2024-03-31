@@ -13,7 +13,7 @@ app.use(cors())*/
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  /*<GoogleOAuthProvider clientId="939987865836-q0can10klbn0rqr0lqskm7cc2fss9b2o.apps.googleusercontent.com">*/
+  /*<GoogleOAuthProvider clientId="your clientID">*/
   <React.StrictMode>
     <App />
   </React.StrictMode>
