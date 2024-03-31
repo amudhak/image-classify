@@ -14,9 +14,9 @@ function ImageLabeling() {
   const fetchImagesFromGoogleDrive = async () => {
     try {
       const folderId = '128vMi0LdY-f3d2rj_LHl_QRJ6TSBbpv3'; // ID of the folder
-      const apiKey = 'apikey'; // Replace with your Google Drive API key
+      // const apiKey = 'apiKey'; // Replace with your Google Drive API key
 
-      const response = await fetch(`https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${apiKey}`);
+      const response = await fetch(`https://www.googleapis.com/drive/v3/files?q='${folderId}'+in+parents&key=${process.env.REACT_APP_API_KEY}`);
       const data = await response.json();
 
       // Filter out only images
@@ -26,7 +26,7 @@ function ImageLabeling() {
       const imageUrls = imageFiles.map(file => ({
         id: file.id,
         name: file.name,
-        url: `https://drive.usercontent.google.com/download?id=${file.id}&authuser=0`
+        url: `https://lh3.googleusercontent.com/d/${file.id}=s660?authuser=0`
         //url: file.thumbnailLink
       }));
 
